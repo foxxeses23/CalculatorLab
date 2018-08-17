@@ -150,17 +150,21 @@ namespace CPE200Lab1
 
         private void btnPercent_Click(object sender, EventArgs e)
         {
-            val = val / 100; 
+            val = val / 100;
+
+            display();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            double b = val%10;
+            val = (val - b)/10;
+            display();
         }
 
         private void btnDot_Click(object sender, EventArgs e)
         {
-            val = val + '.';
+            
         }
     }
 }
