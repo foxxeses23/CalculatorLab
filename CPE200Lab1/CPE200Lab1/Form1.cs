@@ -165,19 +165,15 @@ namespace CPE200Lab1
 
         private void btnDot_Click(object sender, EventArgs e)
         {
-            if(dotCheck == false) { 
-            
+            if(!dotCheck) {
 
-            lblDisplay.Text  = val.ToString()+ ".";
+
+                display() += ".";
             
             dotCheck = true;
         
             }
-            else if(dotCheck == true)
-            {
-                lblDisplay.Text = val.ToString() - ".";
-                dotCheck == false;
-            }
+            
         }  
     }
 }
