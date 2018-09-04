@@ -15,6 +15,7 @@ namespace CPE200Lab1
         private double val = 0;
         private double old = 0;
         int check = 0;
+        bool dotCheck = false;
         
          
         public Form1()
@@ -164,9 +165,19 @@ namespace CPE200Lab1
 
         private void btnDot_Click(object sender, EventArgs e)
         {
-            string c;
-            c = lblDisplay.Text + ".";
+            if(dotCheck == false) { 
             
-        }
+
+            lblDisplay.Text  = val.ToString()+ ".";
+            
+            dotCheck = true;
+        
+            }
+            else if(dotCheck == true)
+            {
+                lblDisplay.Text = val.ToString() - ".";
+                dotCheck == false;
+            }
+        }  
     }
 }
